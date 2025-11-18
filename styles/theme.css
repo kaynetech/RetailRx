@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --retailrx-teal: #0d9488;
   --retailrx-coral: #f97316;

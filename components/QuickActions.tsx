@@ -1,10 +1,10 @@
 'use client';
 
 const actions = [
-  { label: 'Add Product', description: 'Register medication or grocery SKU', icon: '➕' },
-  { label: 'New Sale', description: 'Launch POS workflow', icon: '💳' },
-  { label: 'Purchase Order', description: 'Notify distributor for restock', icon: '📦' },
-  { label: 'View Reports', description: 'Export revenue & compliance logs', icon: '📈' },
+  { label: 'Add Product', icon: '+', color: 'bg-[#e9fbf6]' },
+  { label: 'New Sale', icon: '🛒', color: 'bg-[#eef4ff]' },
+  { label: 'Purchase Order', icon: '📄', color: 'bg-[#f4ecff]' },
+  { label: 'View Reports', icon: '📊', color: 'bg-[#fff6e5]' },
 ];
 
 export function QuickActions() {
@@ -25,15 +25,10 @@ export function QuickActions() {
           <button
             key={action.label}
             type="button"
-            className="flex items-start gap-3 rounded-2xl border border-slate-100 bg-slate-50 p-4 text-left transition hover:border-teal-200 hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-500"
+            className={`flex items-center gap-3 rounded-2xl p-4 text-left text-slate-700 transition hover:scale-[1.01] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 ${action.color}`}
           >
-            <span aria-hidden className="text-2xl" role="img">
-              {action.icon}
-            </span>
-            <span>
-              <p className="text-sm font-semibold text-slate-900">{action.label}</p>
-              <p className="text-xs text-slate-500">{action.description}</p>
-            </span>
+            <span aria-hidden className="text-xl font-semibold text-slate-800">{action.icon}</span>
+            <p className="text-sm font-semibold text-slate-900">{action.label}</p>
           </button>
         ))}
       </div>

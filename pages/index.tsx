@@ -16,6 +16,10 @@ export default function HomePage() {
         <meta name="description" content="Retail & pharmacy management overview" />
       </Head>
       <div className="space-y-6">
+        <section className="space-y-1">
+          <h3 className="text-2xl font-semibold text-slate-900">Dashboard Overview</h3>
+          <p className="text-sm text-slate-500">Real-time pharmacy operations monitoring</p>
+        </section>
         <DashboardCards />
         <div className="grid gap-4 lg:grid-cols-[2fr,1fr]">
           <QuickActions />
